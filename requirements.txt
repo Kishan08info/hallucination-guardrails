@@ -1,0 +1,3 @@
+# Core library: Python 3.10+ standard library only — no dependencies.
+# Tests: pytest (pip install pytest)
+pytest>=8

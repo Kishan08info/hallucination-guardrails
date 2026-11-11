@@ -1,0 +1,47 @@
+{
+  "runs": [
+    {
+      "run": "stale-doc-included",
+      "n_answers": 8,
+      "n_claims": 11,
+      "decisions": {
+        "PASS": 4,
+        "FLAG": 1,
+        "BLOCK": 3
+      },
+      "detection": {
+        "true_positives": 3,
+        "false_positives": 0,
+        "false_negatives": 2,
+        "precision": 1.0,
+        "recall": 0.6,
+        "misses": [
+          "A4-stale-price: 'The Starter plan costs $29 per month.' -> SUPPORTED",
+          "A6-attribution-swap: 'Meridian Health uses Northwind for weekly sales reporting.' -> SUPPORTED"
+        ]
+      }
+    },
+    {
+      "run": "freshness-cutoff-2025-01-01",
+      "n_answers": 8,
+      "n_claims": 11,
+      "decisions": {
+        "PASS": 3,
+        "FLAG": 1,
+        "BLOCK": 4
+      },
+      "detection": {
+        "true_positives": 4,
+        "false_positives": 0,
+        "false_negatives": 1,
+        "precision": 1.0,
+        "recall": 0.8,
+        "misses": [
+          "A6-attribution-swap: 'Meridian Health uses Northwind for weekly sales reporting.' -> SUPPORTED"
+        ]
+      }
+    }
+  ],
+  "corpus_passages": 8,
+  "fresh_passages": 7
+}

@@ -1,0 +1,612 @@
+[
+  {
+    "answer_id": "A1-clean-pricing",
+    "original_answer": "The Starter plan costs $49 per month. The Pro plan costs $199 per month.",
+    "decision": "PASS",
+    "safe_answer": "The Starter plan costs $49 per month. The Pro plan costs $199 per month.",
+    "dropped_claims": [],
+    "flagged_claims": [],
+    "counts": {
+      "supported": 2,
+      "partial": 0,
+      "unsupported": 0
+    },
+    "claims": [
+      {
+        "claim": "The Starter plan costs $49 per month.",
+        "verdict": "SUPPORTED",
+        "best_passage_id": "pricing-2026",
+        "best_score": 0.7472,
+        "coverage": 1.0,
+        "confidence": 0.8736,
+        "numbers_in_claim": [
+          "49"
+        ],
+        "numbers_missing": [],
+        "entities_in_claim": [
+          "Starter"
+        ],
+        "entities_missing": []
+      },
+      {
+        "claim": "The Pro plan costs $199 per month.",
+        "verdict": "SUPPORTED",
+        "best_passage_id": "pricing-2026",
+        "best_score": 0.7497,
+        "coverage": 1.0,
+        "confidence": 0.8748,
+        "numbers_in_claim": [
+          "199"
+        ],
+        "numbers_missing": [],
+        "entities_in_claim": [
+          "Pro"
+        ],
+        "entities_missing": []
+      }
+    ]
+  },
+  {
+    "answer_id": "A2-wrong-price",
+    "original_answer": "The Growth plan costs $79 per month.",
+    "decision": "BLOCK",
+    "safe_answer": "I don't have enough information in the retrieved sources to answer that.",
+    "dropped_claims": [
+      "The Growth plan costs $79 per month."
+    ],
+    "flagged_claims": [],
+    "counts": {
+      "supported": 0,
+      "partial": 0,
+      "unsupported": 1
+    },
+    "claims": [
+      {
+        "claim": "The Growth plan costs $79 per month.",
+        "verdict": "UNSUPPORTED",
+        "best_passage_id": "pricing-2024-stale",
+        "best_score": 0.7532,
+        "coverage": 0.8,
+        "confidence": 0.5766,
+        "numbers_in_claim": [
+          "79"
+        ],
+        "numbers_missing": [
+          "79"
+        ],
+        "entities_in_claim": [
+          "Growth"
+        ],
+        "entities_missing": []
+      }
+    ]
+  },
+  {
+    "answer_id": "A3-invented-feature",
+    "original_answer": "Northwind Analytics offers AI-powered fraud detection for banks.",
+    "decision": "BLOCK",
+    "safe_answer": "I don't have enough information in the retrieved sources to answer that.",
+    "dropped_claims": [
+      "Northwind Analytics offers AI-powered fraud detection for banks."
+    ],
+    "flagged_claims": [],
+    "counts": {
+      "supported": 0,
+      "partial": 0,
+      "unsupported": 1
+    },
+    "claims": [
+      {
+        "claim": "Northwind Analytics offers AI-powered fraud detection for banks.",
+        "verdict": "UNSUPPORTED",
+        "best_passage_id": "features",
+        "best_score": 0.2254,
+        "coverage": 0.375,
+        "confidence": 0.6127,
+        "numbers_in_claim": [],
+        "numbers_missing": [],
+        "entities_in_claim": [
+          "Northwind Analytics"
+        ],
+        "entities_missing": []
+      }
+    ]
+  },
+  {
+    "answer_id": "A4-stale-price",
+    "original_answer": "The Starter plan costs $29 per month.",
+    "decision": "PASS",
+    "safe_answer": "The Starter plan costs $29 per month.",
+    "dropped_claims": [],
+    "flagged_claims": [],
+    "counts": {
+      "supported": 1,
+      "partial": 0,
+      "unsupported": 0
+    },
+    "claims": [
+      {
+        "claim": "The Starter plan costs $29 per month.",
+        "verdict": "SUPPORTED",
+        "best_passage_id": "pricing-2024-stale",
+        "best_score": 0.8142,
+        "coverage": 1.0,
+        "confidence": 0.9071,
+        "numbers_in_claim": [
+          "29"
+        ],
+        "numbers_missing": [],
+        "entities_in_claim": [
+          "Starter"
+        ],
+        "entities_missing": []
+      }
+    ]
+  },
+  {
+    "answer_id": "A5-mixed",
+    "original_answer": "Northwind Analytics launched its public API in June 2025. Beta Ltd uses Northwind for weekly sales reporting. The API supports 5,000 requests per day.",
+    "decision": "BLOCK",
+    "safe_answer": "Northwind Analytics launched its public API in June 2025. Beta Ltd uses Northwind for weekly sales reporting.",
+    "dropped_claims": [
+      "The API supports 5,000 requests per day."
+    ],
+    "flagged_claims": [],
+    "counts": {
+      "supported": 2,
+      "partial": 0,
+      "unsupported": 1
+    },
+    "claims": [
+      {
+        "claim": "Northwind Analytics launched its public API in June 2025.",
+        "verdict": "SUPPORTED",
+        "best_passage_id": "api-launch",
+        "best_score": 0.7467,
+        "coverage": 1.0,
+        "confidence": 0.8734,
+        "numbers_in_claim": [
+          "2025"
+        ],
+        "numbers_missing": [],
+        "entities_in_claim": [
+          "Northwind Analytics",
+          "June"
+        ],
+        "entities_missing": []
+      },
+      {
+        "claim": "Beta Ltd uses Northwind for weekly sales reporting.",
+        "verdict": "SUPPORTED",
+        "best_passage_id": "customers",
+        "best_score": 0.6882,
+        "coverage": 1.0,
+        "confidence": 0.8441,
+        "numbers_in_claim": [],
+        "numbers_missing": [],
+        "entities_in_claim": [
+          "Beta Ltd",
+          "Northwind"
+        ],
+        "entities_missing": []
+      },
+      {
+        "claim": "The API supports 5,000 requests per day.",
+        "verdict": "UNSUPPORTED",
+        "best_passage_id": "api-launch",
+        "best_score": 0.6304,
+        "coverage": 0.8,
+        "confidence": 0.5152,
+        "numbers_in_claim": [
+          "5000"
+        ],
+        "numbers_missing": [
+          "5000"
+        ],
+        "entities_in_claim": [],
+        "entities_missing": []
+      }
+    ]
+  },
+  {
+    "answer_id": "A6-attribution-swap",
+    "original_answer": "Meridian Health uses Northwind for weekly sales reporting.",
+    "decision": "PASS",
+    "safe_answer": "Meridian Health uses Northwind for weekly sales reporting.",
+    "dropped_claims": [],
+    "flagged_claims": [],
+    "counts": {
+      "supported": 1,
+      "partial": 0,
+      "unsupported": 0
+    },
+    "claims": [
+      {
+        "claim": "Meridian Health uses Northwind for weekly sales reporting.",
+        "verdict": "SUPPORTED",
+        "best_passage_id": "customers",
+        "best_score": 0.5227,
+        "coverage": 1.0,
+        "confidence": 0.7614,
+        "numbers_in_claim": [],
+        "numbers_missing": [],
+        "entities_in_claim": [
+          "Meridian Health",
+          "Northwind"
+        ],
+        "entities_missing": []
+      }
+    ]
+  },
+  {
+    "answer_id": "A7-clean-numbers",
+    "original_answer": "In the first quarter of 2026, Northwind reported $420,000 in revenue from 850 paying customers.",
+    "decision": "PASS",
+    "safe_answer": "In the first quarter of 2026, Northwind reported $420,000 in revenue from 850 paying customers.",
+    "dropped_claims": [],
+    "flagged_claims": [],
+    "counts": {
+      "supported": 1,
+      "partial": 0,
+      "unsupported": 0
+    },
+    "claims": [
+      {
+        "claim": "In the first quarter of 2026, Northwind reported $420,000 in revenue from 850 paying customers.",
+        "verdict": "SUPPORTED",
+        "best_passage_id": "revenue-q1-2026",
+        "best_score": 0.8527,
+        "coverage": 1.0,
+        "confidence": 0.9264,
+        "numbers_in_claim": [
+          "2026",
+          "420000",
+          "850"
+        ],
+        "numbers_missing": [],
+        "entities_in_claim": [
+          "Northwind"
+        ],
+        "entities_missing": []
+      }
+    ]
+  },
+  {
+    "answer_id": "A8-vague",
+    "original_answer": "Northwind Analytics is a popular analytics tool with many happy customers.",
+    "decision": "FLAG",
+    "safe_answer": "Northwind Analytics is a popular analytics tool with many happy customers. [unverified]",
+    "dropped_claims": [],
+    "flagged_claims": [
+      "Northwind Analytics is a popular analytics tool with many happy customers."
+    ],
+    "counts": {
+      "supported": 0,
+      "partial": 1,
+      "unsupported": 0
+    },
+    "claims": [
+      {
+        "claim": "Northwind Analytics is a popular analytics tool with many happy customers.",
+        "verdict": "PARTIAL",
+        "best_passage_id": "revenue-q1-2026",
+        "best_score": 0.1899,
+        "coverage": 0.4286,
+        "confidence": 0.5949,
+        "numbers_in_claim": [],
+        "numbers_missing": [],
+        "entities_in_claim": [
+          "Northwind Analytics"
+        ],
+        "entities_missing": []
+      }
+    ]
+  },
+  {
+    "answer_id": "A1-clean-pricing",
+    "original_answer": "The Starter plan costs $49 per month. The Pro plan costs $199 per month.",
+    "decision": "PASS",
+    "safe_answer": "The Starter plan costs $49 per month. The Pro plan costs $199 per month.",
+    "dropped_claims": [],
+    "flagged_claims": [],
+    "counts": {
+      "supported": 2,
+      "partial": 0,
+      "unsupported": 0
+    },
+    "claims": [
+      {
+        "claim": "The Starter plan costs $49 per month.",
+        "verdict": "SUPPORTED",
+        "best_passage_id": "pricing-2026",
+        "best_score": 0.7846,
+        "coverage": 1.0,
+        "confidence": 0.8923,
+        "numbers_in_claim": [
+          "49"
+        ],
+        "numbers_missing": [],
+        "entities_in_claim": [
+          "Starter"
+        ],
+        "entities_missing": []
+      },
+      {
+        "claim": "The Pro plan costs $199 per month.",
+        "verdict": "SUPPORTED",
+        "best_passage_id": "pricing-2026",
+        "best_score": 0.7916,
+        "coverage": 1.0,
+        "confidence": 0.8958,
+        "numbers_in_claim": [
+          "199"
+        ],
+        "numbers_missing": [],
+        "entities_in_claim": [
+          "Pro"
+        ],
+        "entities_missing": []
+      }
+    ]
+  },
+  {
+    "answer_id": "A2-wrong-price",
+    "original_answer": "The Growth plan costs $79 per month.",
+    "decision": "BLOCK",
+    "safe_answer": "I don't have enough information in the retrieved sources to answer that.",
+    "dropped_claims": [
+      "The Growth plan costs $79 per month."
+    ],
+    "flagged_claims": [],
+    "counts": {
+      "supported": 0,
+      "partial": 0,
+      "unsupported": 1
+    },
+    "claims": [
+      {
+        "claim": "The Growth plan costs $79 per month.",
+        "verdict": "UNSUPPORTED",
+        "best_passage_id": "pricing-2026",
+        "best_score": 0.7881,
+        "coverage": 0.8,
+        "confidence": 0.5941,
+        "numbers_in_claim": [
+          "79"
+        ],
+        "numbers_missing": [
+          "79"
+        ],
+        "entities_in_claim": [
+          "Growth"
+        ],
+        "entities_missing": []
+      }
+    ]
+  },
+  {
+    "answer_id": "A3-invented-feature",
+    "original_answer": "Northwind Analytics offers AI-powered fraud detection for banks.",
+    "decision": "BLOCK",
+    "safe_answer": "I don't have enough information in the retrieved sources to answer that.",
+    "dropped_claims": [
+      "Northwind Analytics offers AI-powered fraud detection for banks."
+    ],
+    "flagged_claims": [],
+    "counts": {
+      "supported": 0,
+      "partial": 0,
+      "unsupported": 1
+    },
+    "claims": [
+      {
+        "claim": "Northwind Analytics offers AI-powered fraud detection for banks.",
+        "verdict": "UNSUPPORTED",
+        "best_passage_id": "features",
+        "best_score": 0.2251,
+        "coverage": 0.375,
+        "confidence": 0.6126,
+        "numbers_in_claim": [],
+        "numbers_missing": [],
+        "entities_in_claim": [
+          "Northwind Analytics"
+        ],
+        "entities_missing": []
+      }
+    ]
+  },
+  {
+    "answer_id": "A4-stale-price",
+    "original_answer": "The Starter plan costs $29 per month.",
+    "decision": "BLOCK",
+    "safe_answer": "I don't have enough information in the retrieved sources to answer that.",
+    "dropped_claims": [
+      "The Starter plan costs $29 per month."
+    ],
+    "flagged_claims": [],
+    "counts": {
+      "supported": 0,
+      "partial": 0,
+      "unsupported": 1
+    },
+    "claims": [
+      {
+        "claim": "The Starter plan costs $29 per month.",
+        "verdict": "UNSUPPORTED",
+        "best_passage_id": "pricing-2026",
+        "best_score": 0.7784,
+        "coverage": 0.8,
+        "confidence": 0.5892,
+        "numbers_in_claim": [
+          "29"
+        ],
+        "numbers_missing": [
+          "29"
+        ],
+        "entities_in_claim": [
+          "Starter"
+        ],
+        "entities_missing": []
+      }
+    ]
+  },
+  {
+    "answer_id": "A5-mixed",
+    "original_answer": "Northwind Analytics launched its public API in June 2025. Beta Ltd uses Northwind for weekly sales reporting. The API supports 5,000 requests per day.",
+    "decision": "BLOCK",
+    "safe_answer": "Northwind Analytics launched its public API in June 2025. Beta Ltd uses Northwind for weekly sales reporting.",
+    "dropped_claims": [
+      "The API supports 5,000 requests per day."
+    ],
+    "flagged_claims": [],
+    "counts": {
+      "supported": 2,
+      "partial": 0,
+      "unsupported": 1
+    },
+    "claims": [
+      {
+        "claim": "Northwind Analytics launched its public API in June 2025.",
+        "verdict": "SUPPORTED",
+        "best_passage_id": "api-launch",
+        "best_score": 0.7458,
+        "coverage": 1.0,
+        "confidence": 0.8729,
+        "numbers_in_claim": [
+          "2025"
+        ],
+        "numbers_missing": [],
+        "entities_in_claim": [
+          "Northwind Analytics",
+          "June"
+        ],
+        "entities_missing": []
+      },
+      {
+        "claim": "Beta Ltd uses Northwind for weekly sales reporting.",
+        "verdict": "SUPPORTED",
+        "best_passage_id": "customers",
+        "best_score": 0.6894,
+        "coverage": 1.0,
+        "confidence": 0.8447,
+        "numbers_in_claim": [],
+        "numbers_missing": [],
+        "entities_in_claim": [
+          "Beta Ltd",
+          "Northwind"
+        ],
+        "entities_missing": []
+      },
+      {
+        "claim": "The API supports 5,000 requests per day.",
+        "verdict": "UNSUPPORTED",
+        "best_passage_id": "api-launch",
+        "best_score": 0.6243,
+        "coverage": 0.8,
+        "confidence": 0.5122,
+        "numbers_in_claim": [
+          "5000"
+        ],
+        "numbers_missing": [
+          "5000"
+        ],
+        "entities_in_claim": [],
+        "entities_missing": []
+      }
+    ]
+  },
+  {
+    "answer_id": "A6-attribution-swap",
+    "original_answer": "Meridian Health uses Northwind for weekly sales reporting.",
+    "decision": "PASS",
+    "safe_answer": "Meridian Health uses Northwind for weekly sales reporting.",
+    "dropped_claims": [],
+    "flagged_claims": [],
+    "counts": {
+      "supported": 1,
+      "partial": 0,
+      "unsupported": 0
+    },
+    "claims": [
+      {
+        "claim": "Meridian Health uses Northwind for weekly sales reporting.",
+        "verdict": "SUPPORTED",
+        "best_passage_id": "customers",
+        "best_score": 0.5243,
+        "coverage": 1.0,
+        "confidence": 0.7622,
+        "numbers_in_claim": [],
+        "numbers_missing": [],
+        "entities_in_claim": [
+          "Meridian Health",
+          "Northwind"
+        ],
+        "entities_missing": []
+      }
+    ]
+  },
+  {
+    "answer_id": "A7-clean-numbers",
+    "original_answer": "In the first quarter of 2026, Northwind reported $420,000 in revenue from 850 paying customers.",
+    "decision": "PASS",
+    "safe_answer": "In the first quarter of 2026, Northwind reported $420,000 in revenue from 850 paying customers.",
+    "dropped_claims": [],
+    "flagged_claims": [],
+    "counts": {
+      "supported": 1,
+      "partial": 0,
+      "unsupported": 0
+    },
+    "claims": [
+      {
+        "claim": "In the first quarter of 2026, Northwind reported $420,000 in revenue from 850 paying customers.",
+        "verdict": "SUPPORTED",
+        "best_passage_id": "revenue-q1-2026",
+        "best_score": 0.8478,
+        "coverage": 1.0,
+        "confidence": 0.9239,
+        "numbers_in_claim": [
+          "2026",
+          "420000",
+          "850"
+        ],
+        "numbers_missing": [],
+        "entities_in_claim": [
+          "Northwind"
+        ],
+        "entities_missing": []
+      }
+    ]
+  },
+  {
+    "answer_id": "A8-vague",
+    "original_answer": "Northwind Analytics is a popular analytics tool with many happy customers.",
+    "decision": "FLAG",
+    "safe_answer": "Northwind Analytics is a popular analytics tool with many happy customers. [unverified]",
+    "dropped_claims": [],
+    "flagged_claims": [
+      "Northwind Analytics is a popular analytics tool with many happy customers."
+    ],
+    "counts": {
+      "supported": 0,
+      "partial": 1,
+      "unsupported": 0
+    },
+    "claims": [
+      {
+        "claim": "Northwind Analytics is a popular analytics tool with many happy customers.",
+        "verdict": "PARTIAL",
+        "best_passage_id": "revenue-q1-2026",
+        "best_score": 0.1885,
+        "coverage": 0.4286,
+        "confidence": 0.5942,
+        "numbers_in_claim": [],
+        "numbers_missing": [],
+        "entities_in_claim": [
+          "Northwind Analytics"
+        ],
+        "entities_missing": []
+      }
+    ]
+  }
+]
